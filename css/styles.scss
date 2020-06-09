@@ -1,0 +1,68 @@
+// SASS 
+
+// Variables
+
+$base-color: snow;
+
+// CSS
+* {
+    box-sizing: border-box;
+}
+
+*::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $base-color;
+}
+
+.app-header {
+    text-align: center;
+    padding: 1% 0 3%;
+}
+
+// main 
+
+.app-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-btnbar {
+    display: flex;
+    justify-content: center;
+
+    &__button {
+        margin: 0% 1%;
+    }
+}
+
+.app-game {
+    margin: 2% 0;
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 12px 12px;
+    background-color: black;
+
+    &__cel {
+        background-color: $base-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10rem;
+
+        &--cross {
+            color: lightcoral
+        }
+
+        &--o {
+            color: steelblue
+        }
+    }
+}
